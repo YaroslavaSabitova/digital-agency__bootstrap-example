@@ -65,6 +65,10 @@ ol {
   list-style: none;
 }
 
+.mrg-t-7 {
+  margin-top: 7rem;
+}
+
 .title {
   font-size: 4rem;
   line-height: 4.9rem;
@@ -205,10 +209,11 @@ ol {
   width: 40.4rem;
   height: 15.4rem;
   z-index: -1;
-  top: 125px;
-  left: 0px;
+  top: 170px;
+  left: -8px;
   background-image: -webkit-repeating-radial-gradient(center center, #E7F0FC, #E7F0FC 4px, transparent 1px, transparent 100%);
   background-image: repeating-radial-gradient(center center, #E7F0FC, #E7F0FC 4px, transparent 1px, transparent 100%);
+  z-index: -3;
 }
 
 .subtitle {
@@ -218,14 +223,42 @@ ol {
   text-transform: capitalize;
 }
 
+.cards {
+  position: relative;
+}
+.cards::before, .cards::after {
+  content: "";
+  position: absolute;
+}
+.cards::before {
+  top: 133px;
+  left: -155px;
+  width: 104.7rem;
+  height: 61.9rem;
+  background: #F4F9FF;
+  border-radius: 150px 0px 0px 0px;
+  z-index: -2;
+}
+.cards::after {
+  width: 12rem;
+  height: 12rem;
+  border-radius: 50%;
+  border: 8.8px solid #FF007A;
+  bottom: 29px;
+  right: 39px;
+  z-index: -3;
+}
+
 .card {
   border: 1px solid #F2F2F2;
   -webkit-box-shadow: 0px 1rem 5rem rgba(0, 0, 0, 0.05);
           box-shadow: 0px 1rem 5rem rgba(0, 0, 0, 0.05);
+  background-color: #ffffff;
   border-radius: 40px;
   width: 30.8rem;
   height: 37.9rem;
   padding: 3.9rem 3rem 5.7rem;
+  position: relative;
 }
 .card__icon {
   font-size: 7.4rem;

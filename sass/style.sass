@@ -12,6 +12,7 @@ $dark-blue: #2639ED
 $light-blue-1: #DAE9FF
 $light-blue-2: #E7F0FC
 $light-blue-3: #F1F7FF
+$light-blue-4: #F4F9FF
 
 $dark-peach: #FF9900
 $light-peach: #FFF5DB
@@ -46,6 +47,12 @@ $mb-4: 4rem
     background-color: $light-blue-1
     border-radius: 50%
     z-index: -1
+
+@mixin round-shape-border
+    width: 12rem
+    height: 12rem
+    border-radius: 50%
+    border: 8.8px solid $dark-pink
 
 @mixin dots-background
     -webkit-background-size: 20px 20px
@@ -111,6 +118,9 @@ p
 ul,
 ol
     list-style: none
+
+.mrg-t-7
+    margin-top: 7rem
 
 .title
     font-size: 4rem
@@ -228,12 +238,13 @@ ol
         &::before
             @include content-position
             @include dots-background
-            top: 125px
-            left: 0px
+            top: 170px
+            left: -8px
             background-image: -webkit-repeating-radial-gradient(center center, $light-blue-2, $light-blue-2 4px, transparent 1px, transparent 100%)
             background-image: -moz-repeating-radial-gradient(center center, $light-blue-2, $light-blue-2 4px, transparent 1px, transparent 100%)
             background-image: -ms-repeating-radial-gradient(center center, $light-blue-2, $light-blue-2 4px, transparent 1px, transparent 100%)
             background-image: repeating-radial-gradient(center center, $light-blue-2, $light-blue-2 4px, transparent 1px, transparent 100%)
+            z-index: -3
 
 .subtitle
     color: $color-black
@@ -241,13 +252,37 @@ ol
     line-height: 3rem
     text-transform: capitalize
 
+.cards
+    position: relative
+
+    &::before,
+    &::after
+        @include content-position
+
+    &::before
+        top: 133px
+        left: -155px
+        width: 104.7rem
+        height: 61.9rem
+        background: $light-blue-4
+        border-radius: 150px 0px 0px 0px
+        z-index: -2
+
+    &::after
+        @include round-shape-border
+        bottom: 29px
+        right: 39px
+        z-index: -3
+
 .card
     border: 1px solid $color-grey-2
     box-shadow: 0px 1rem 5rem rgba($color-black, 0.05)
+    background-color: $color-white
     border-radius: 40px
     width: 30.8rem
     height: 37.9rem
     padding: 3.9rem 3rem 5.7rem
+    position: relative
 
     &__icon
         font-size: 7.4rem
@@ -263,7 +298,7 @@ ol
 
         &_green
             color: $dark-green
-        
+
         &-box
             width: 121px
             height: 121px
@@ -293,11 +328,6 @@ ol
         line-height: 2.2rem
         text-align: center
         color: $color-font-2
-
-
-
-
-
 
 // MEDIA QUERIES
 
