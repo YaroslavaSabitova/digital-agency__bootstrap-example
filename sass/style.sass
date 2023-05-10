@@ -364,12 +364,26 @@ ol
         &::after
             right: 5px
 
-    .clients__title
+    .clients
+        margin-bottom: 8rem
+
+    .clients__title,
+    .help__title,
+    .help__info
         text-align: center
 
     .clients__info
         margin: 0 auto
         text-align: center
+
+    .help__info
+        margin-bottom: 4rem
+
+        &::before
+            top: 92px
+
+    .cards::before
+        width: 93rem
 
 @media (max-width: 767px)
 
@@ -379,11 +393,29 @@ ol
     html
         font-size: 59%
 
-    .img-wrapper
+    .img-wrapper,
+    .cards::before
         display: none
 
     .hero
         margin-bottom: 4rem
+
+    .card
+        width: 27rem
+        height: 30rem
+        padding: 2rem 2rem 3rem
+        justify-content: space-between
+
+        &__icon
+            font-size: 5rem
+
+        &__subtitle
+            margin-bottom: 1rem
+
+        &__icon-box
+            width: 75px
+            height: 75px
+            margin-bottom: 1rem
 
 @media (max-width: 575px)
 
@@ -400,8 +432,23 @@ ol
         li
             padding: .5rem .7rem
 
-    .hero__button::before
+    .hero__button::before,
+    .help__info::before
         display: none
 
     .clients__item:not(:last-child)
         margin: 0 0rem 3rem 0
+
+    .help__title,
+    .help__info
+        width: 90%
+        margin: 0 auto 2rem
+
+    .cards 
+        flex-direction: column
+
+        .flex-column
+            margin: 0 auto 2rem
+
+        &::after
+            bottom: 0
