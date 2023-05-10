@@ -2,16 +2,58 @@
 
 $color-white: #ffffff
 $color-grey: #F4F4F4
+$color-grey-2: #F2F2F2
 $color-black: #000000
-$color-peach: #FFF5DB
 
 $color-font-1: #565656
 $color-font-2: #757575
 
-$main-blue: #2639ED
+$dark-blue: #2639ED
 $light-blue-1: #DAE9FF
+$light-blue-2: #E7F0FC
+$light-blue-3: #F1F7FF
+
+$dark-peach: #FF9900
+$light-peach: #FFF5DB
+
+$dark-pink: #FF007A
+$light-pink: #FFF2F8
+
+$dark-green: #00DA71
+$light-green: #DEFFEE
 
 $mb-4: 4rem
+
+@mixin font16-line26-font1
+    font-size: 1.6rem
+    line-height: 2.6rem
+    color: $color-font-1
+
+@mixin content-position
+    content: ""
+    position: absolute
+
+@mixin square-shape
+    width: 17.8rem
+    height: 17.8rem
+    background-color: $light-peach
+    border-radius: 0px 0px 100px 0px
+    z-index: -1
+
+@mixin round-shape
+    width: 12.9rem
+    height: 12.9rem
+    background-color: $light-blue-1
+    border-radius: 50%
+    z-index: -1
+
+@mixin dots-background
+    -webkit-background-size: 20px 20px
+    -moz-background-size: 20px 20px
+    background-size: 20px 20px
+    width: 40.4rem
+    height: 15.4rem
+    z-index: -1
 
 // COMMON STYLES
 
@@ -64,8 +106,6 @@ button
     cursor: pointer
 
 p
-    font-size: 1.6rem
-    line-height: 2.6rem
     text-transform: none
 
 ul,
@@ -76,12 +116,11 @@ ol
     font-size: 4rem
     line-height: 4.9rem
     text-shadow: -1px 0 $color-black, 0 1px $color-black, 1px 0 $color-black, 0 -1px $color-black
-    text-transform: capitalize
 
 .button
     display: inline-block
     color: $color-white
-    background-color: $main-blue
+    background-color: $dark-blue
     letter-spacing: 0.065em
     text-transform: capitalize
     text-shadow: -0.5px 0 $color-white, 0 0.5px $color-white, 0.5px 0 $color-white, 0 -0.5px $color-white
@@ -104,6 +143,7 @@ ol
 
     &__title
         margin-bottom: $mb-4
+        text-transform: capitalize
 
     &__img
         max-width: 75.4rem
@@ -111,57 +151,41 @@ ol
         border-radius: 0px 0px 0px 20rem
 
     &__info
+        @include font16-line26-font1
         width: 95%
-        font-size: 1.6rem
-        line-height: 2.6rem
         margin-bottom: 3.3rem
-        color: $color-font-1
 
     &__button
-        font-size: 20px
-        line-height: 25px
+        font-size: 2rem
+        line-height: 2.5rem
         position: relative
 
         &::before
-            position: absolute
-            content: ""
+            @include content-position
+            @include dots-background
             top: 25px
             left: -48px
             background-image: -webkit-repeating-radial-gradient(center center, $color-grey, $color-grey 4px, transparent 1px, transparent 100%)
             background-image: -moz-repeating-radial-gradient(center center, $color-grey, $color-grey 4px, transparent 1px, transparent 100%)
             background-image: -ms-repeating-radial-gradient(center center, $color-grey, $color-grey 4px, transparent 1px, transparent 100%)
             background-image: repeating-radial-gradient(center center, $color-grey, $color-grey 4px, transparent 1px, transparent 100%)
-            -webkit-background-size: 20px 20px
-            -moz-background-size: 20px 20px
-            background-size: 20px 20px
-            width: 40.4rem
-            height: 15.4rem
-            z-index: -1
 
 .img-wrapper
     position: relative
 
     &::before,
     &::after
-        position: absolute
-        content: ""
-        z-index: -1
+        @include content-position
 
     &::before
+        @include round-shape
         top: 0px
         left: -30px
-        width: 12.9rem
-        height: 12.9rem
-        background-color: $light-blue-1
-        border-radius: 50%
 
     &::after
+        @include square-shape
         bottom: -100px
         right: 0px
-        width: 17.8rem
-        height: 17.8rem
-        background-color: $color-peach
-        border-radius: 0px 0px 100px 0px
 
 // SECTION CLIENTS
 
@@ -170,15 +194,110 @@ ol
 
     &__title
         margin-bottom: 1.7rem
+        text-transform: capitalize
 
     &__info
         width: 90%
         color: $color-font-2
-        font-size: 18px
-        line-height: 29px
+        font-size: 1.8rem
+        line-height: 2.9rem
 
     &__item:not(:last-child)
         margin: 0 2rem 2rem 0
+
+// SECTION HELP
+
+.help
+    margin-bottom: 14.6rem
+
+    &__title
+        margin-bottom: 3rem
+        position: relative
+
+        &::before
+            @include content-position
+            @include square-shape
+            transform: rotate(180deg)
+            top: -55px
+            left: -40px
+
+    &__info
+        @include font16-line26-font1
+        position: relative
+
+        &::before
+            @include content-position
+            @include dots-background
+            top: 125px
+            left: 0px
+            background-image: -webkit-repeating-radial-gradient(center center, $light-blue-2, $light-blue-2 4px, transparent 1px, transparent 100%)
+            background-image: -moz-repeating-radial-gradient(center center, $light-blue-2, $light-blue-2 4px, transparent 1px, transparent 100%)
+            background-image: -ms-repeating-radial-gradient(center center, $light-blue-2, $light-blue-2 4px, transparent 1px, transparent 100%)
+            background-image: repeating-radial-gradient(center center, $light-blue-2, $light-blue-2 4px, transparent 1px, transparent 100%)
+
+.subtitle
+    color: $color-black
+    font-size: 2.4rem
+    line-height: 3rem
+    text-transform: capitalize
+
+.card
+    border: 1px solid $color-grey-2
+    box-shadow: 0px 1rem 5rem rgba($color-black, 0.05)
+    border-radius: 40px
+    width: 30.8rem
+    height: 37.9rem
+    padding: 3.9rem 3rem 5.7rem
+
+    &__icon
+        font-size: 7.4rem
+
+        &_blue
+            color: $dark-blue
+
+        &_peach
+            color: $dark-peach
+
+        &_pink
+            color: $dark-pink
+
+        &_green
+            color: $dark-green
+        
+        &-box
+            width: 121px
+            height: 121px
+            border-radius: 20px
+            margin-bottom: 3.1rem
+
+            &_blue
+                background-color: $light-blue-3
+
+            &_peach
+                background-color: $light-peach
+
+            &_pink
+                background-color: $light-pink
+
+            &_green
+                background-color: $light-green
+
+    &__subtitle
+        width: 80%
+        text-align: center
+        text-shadow: -0.3px 0 $color-black, 0 0.3px $color-black, 0.3px 0 $color-black, 0 -0.3px $color-black
+        margin-bottom: 2.7rem
+
+    &__info
+        font-size: 1.6rem
+        line-height: 2.2rem
+        text-align: center
+        color: $color-font-2
+
+
+
+
+
 
 // MEDIA QUERIES
 
@@ -192,7 +311,6 @@ ol
 
     .hero__img
         max-width: 60rem
-
 
 @media (max-width: 991px)
 
@@ -236,7 +354,6 @@ ol
 
     .hero
         margin-bottom: 4rem
-
 
 @media (max-width: 575px)
 

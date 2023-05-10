@@ -57,8 +57,6 @@ button {
 }
 
 p {
-  font-size: 1.6rem;
-  line-height: 2.6rem;
   text-transform: none;
 }
 
@@ -71,7 +69,6 @@ ol {
   font-size: 4rem;
   line-height: 4.9rem;
   text-shadow: -1px 0 #000000, 0 1px #000000, 1px 0 #000000, 0 -1px #000000;
-  text-transform: capitalize;
 }
 
 .button {
@@ -99,6 +96,7 @@ ol {
 }
 .hero__title {
   margin-bottom: 4rem;
+  text-transform: capitalize;
 }
 .hero__img {
   max-width: 75.4rem;
@@ -107,53 +105,54 @@ ol {
   border-radius: 0px 0px 0px 20rem;
 }
 .hero__info {
-  width: 95%;
   font-size: 1.6rem;
   line-height: 2.6rem;
-  margin-bottom: 3.3rem;
   color: #565656;
+  width: 95%;
+  margin-bottom: 3.3rem;
 }
 .hero__button {
-  font-size: 20px;
-  line-height: 25px;
+  font-size: 2rem;
+  line-height: 2.5rem;
   position: relative;
 }
 .hero__button::before {
-  position: absolute;
   content: "";
-  top: 25px;
-  left: -48px;
-  background-image: -webkit-repeating-radial-gradient(center center, #F4F4F4, #F4F4F4 4px, transparent 1px, transparent 100%);
-  background-image: repeating-radial-gradient(center center, #F4F4F4, #F4F4F4 4px, transparent 1px, transparent 100%);
+  position: absolute;
   background-size: 20px 20px;
   width: 40.4rem;
   height: 15.4rem;
   z-index: -1;
+  top: 25px;
+  left: -48px;
+  background-image: -webkit-repeating-radial-gradient(center center, #F4F4F4, #F4F4F4 4px, transparent 1px, transparent 100%);
+  background-image: repeating-radial-gradient(center center, #F4F4F4, #F4F4F4 4px, transparent 1px, transparent 100%);
 }
 
 .img-wrapper {
   position: relative;
 }
 .img-wrapper::before, .img-wrapper::after {
-  position: absolute;
   content: "";
-  z-index: -1;
+  position: absolute;
 }
 .img-wrapper::before {
-  top: 0px;
-  left: -30px;
   width: 12.9rem;
   height: 12.9rem;
   background-color: #DAE9FF;
   border-radius: 50%;
+  z-index: -1;
+  top: 0px;
+  left: -30px;
 }
 .img-wrapper::after {
-  bottom: -100px;
-  right: 0px;
   width: 17.8rem;
   height: 17.8rem;
   background-color: #FFF5DB;
   border-radius: 0px 0px 100px 0px;
+  z-index: -1;
+  bottom: -100px;
+  right: 0px;
 }
 
 .clients {
@@ -161,15 +160,117 @@ ol {
 }
 .clients__title {
   margin-bottom: 1.7rem;
+  text-transform: capitalize;
 }
 .clients__info {
   width: 90%;
   color: #757575;
-  font-size: 18px;
-  line-height: 29px;
+  font-size: 1.8rem;
+  line-height: 2.9rem;
 }
 .clients__item:not(:last-child) {
   margin: 0 2rem 2rem 0;
+}
+
+.help {
+  margin-bottom: 14.6rem;
+}
+.help__title {
+  margin-bottom: 3rem;
+  position: relative;
+}
+.help__title::before {
+  content: "";
+  position: absolute;
+  width: 17.8rem;
+  height: 17.8rem;
+  background-color: #FFF5DB;
+  border-radius: 0px 0px 100px 0px;
+  z-index: -1;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  top: -55px;
+  left: -40px;
+}
+.help__info {
+  font-size: 1.6rem;
+  line-height: 2.6rem;
+  color: #565656;
+  position: relative;
+}
+.help__info::before {
+  content: "";
+  position: absolute;
+  background-size: 20px 20px;
+  width: 40.4rem;
+  height: 15.4rem;
+  z-index: -1;
+  top: 125px;
+  left: 0px;
+  background-image: -webkit-repeating-radial-gradient(center center, #E7F0FC, #E7F0FC 4px, transparent 1px, transparent 100%);
+  background-image: repeating-radial-gradient(center center, #E7F0FC, #E7F0FC 4px, transparent 1px, transparent 100%);
+}
+
+.subtitle {
+  color: #000000;
+  font-size: 2.4rem;
+  line-height: 3rem;
+  text-transform: capitalize;
+}
+
+.card {
+  border: 1px solid #F2F2F2;
+  -webkit-box-shadow: 0px 1rem 5rem rgba(0, 0, 0, 0.05);
+          box-shadow: 0px 1rem 5rem rgba(0, 0, 0, 0.05);
+  border-radius: 40px;
+  width: 30.8rem;
+  height: 37.9rem;
+  padding: 3.9rem 3rem 5.7rem;
+}
+.card__icon {
+  font-size: 7.4rem;
+}
+.card__icon_blue {
+  color: #2639ED;
+}
+.card__icon_peach {
+  color: #FF9900;
+}
+.card__icon_pink {
+  color: #FF007A;
+}
+.card__icon_green {
+  color: #00DA71;
+}
+.card__icon-box {
+  width: 121px;
+  height: 121px;
+  border-radius: 20px;
+  margin-bottom: 3.1rem;
+}
+.card__icon-box_blue {
+  background-color: #F1F7FF;
+}
+.card__icon-box_peach {
+  background-color: #FFF5DB;
+}
+.card__icon-box_pink {
+  background-color: #FFF2F8;
+}
+.card__icon-box_green {
+  background-color: #DEFFEE;
+}
+.card__subtitle {
+  width: 80%;
+  text-align: center;
+  text-shadow: -0.3px 0 #000000, 0 0.3px #000000, 0.3px 0 #000000, 0 -0.3px #000000;
+  margin-bottom: 2.7rem;
+}
+.card__info {
+  font-size: 1.6rem;
+  line-height: 2.2rem;
+  text-align: center;
+  color: #757575;
 }
 
 @media (max-width: 1199px) {
