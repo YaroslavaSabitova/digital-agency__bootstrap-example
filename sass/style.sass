@@ -24,6 +24,7 @@ $dark-green: #00DA71
 $light-green: #DEFFEE
 
 $mb-4: 4rem
+$mb-7: 7rem
 
 @mixin font16-line26-font1
     font-size: 1.6rem
@@ -393,12 +394,18 @@ ol
     html
         font-size: 59%
 
+    .main-header,
+    .hero,
+    .clients,
+    .help
+        margin-bottom: $mb-7
+
     .img-wrapper,
     .cards::before
         display: none
 
-    .hero
-        margin-bottom: 4rem
+    .hero__button::before
+        top: -40px
 
     .card
         width: 27rem
@@ -436,15 +443,22 @@ ol
     .help__info::before
         display: none
 
-    .clients__item:not(:last-child)
-        margin: 0 0rem 3rem 0
+    .hero__title
+        margin-bottom: 2rem
+
+    .clients
+        &__logo
+            margin: 0 auto
+
+        &__img
+            width: 90px
 
     .help__title,
     .help__info
         width: 90%
         margin: 0 auto 2rem
 
-    .cards 
+    .cards
         flex-direction: column
 
         .flex-column

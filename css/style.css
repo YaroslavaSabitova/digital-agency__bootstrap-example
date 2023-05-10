@@ -377,13 +377,20 @@ ol {
     font-size: 59%;
   }
 
+  .main-header,
+  .hero,
+  .clients,
+  .help {
+    margin-bottom: 7rem;
+  }
+
   .img-wrapper,
   .cards::before {
     display: none;
   }
 
-  .hero {
-    margin-bottom: 4rem;
+  .hero__button::before {
+    top: -40px;
   }
 
   .card {
@@ -430,8 +437,15 @@ ol {
     display: none;
   }
 
-  .clients__item:not(:last-child) {
-    margin: 0 0rem 3rem 0;
+  .hero__title {
+    margin-bottom: 2rem;
+  }
+
+  .clients__logo {
+    margin: 0 auto;
+  }
+  .clients__img {
+    width: 90px;
   }
 
   .help__title,
