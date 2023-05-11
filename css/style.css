@@ -172,8 +172,8 @@ ol {
   font-size: 1.8rem;
   line-height: 2.9rem;
 }
-.clients__item:not(:last-child) {
-  margin: 0 2rem 2rem 0;
+.clients__logo {
+  height: 13rem;
 }
 
 .help {
@@ -440,12 +440,16 @@ ol {
   .hero__title {
     margin-bottom: 2rem;
   }
+  .hero__info {
+    margin: 0 auto 2rem;
+  }
 
   .clients__logo {
+    width: 32rem;
     margin: 0 auto;
   }
   .clients__img {
-    width: 90px;
+    width: 110px;
   }
 
   .help__title,
