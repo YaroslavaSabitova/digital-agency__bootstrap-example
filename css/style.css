@@ -313,13 +313,49 @@ ol {
   color: #757575;
 }
 
+.promo {
+  margin-bottom: 18.1rem;
+}
 .promo__left {
   margin-right: 12rem;
+  position: relative;
+}
+.promo__left::before {
+  content: "";
+  position: absolute;
+  width: 12.9rem;
+  height: 12.9rem;
+  background-color: #DAE9FF;
+  border-radius: 50%;
+  z-index: -1;
+  background-color: #FFF5DB;
+  bottom: -57px;
+  right: -40px;
 }
 .promo__img {
   -webkit-box-shadow: 10px 20px 50px rgba(0, 0, 0, 0.15);
           box-shadow: 10px 20px 50px rgba(0, 0, 0, 0.15);
   border-radius: 32px;
+}
+.promo__right {
+  position: relative;
+}
+.promo__right::before {
+  content: "";
+  position: absolute;
+  width: 17.8rem;
+  height: 17.8rem;
+  background-color: #FFF5DB;
+  border-radius: 0px 0px 100px 0px;
+  z-index: -1;
+  background-color: #EFF1FF;
+  top: -23px;
+  left: -31px;
+}
+.promo__info {
+  font-size: 1.6rem;
+  line-height: 2.6rem;
+  color: #565656;
 }
 
 @media (max-width: 1199px) {
@@ -399,7 +435,8 @@ ol {
 
   .hero,
   .clients,
-  .help {
+  .help,
+  .promo {
     margin-bottom: 7rem;
   }
 
@@ -536,6 +573,9 @@ ol {
   .promo__left {
     margin-right: unset;
     margin-bottom: 3rem;
+  }
+  .promo__left::before {
+    display: none;
   }
   .promo__right {
     text-align: center;

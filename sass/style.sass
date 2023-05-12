@@ -13,6 +13,7 @@ $light-blue-1: #DAE9FF
 $light-blue-2: #E7F0FC
 $light-blue-3: #F1F7FF
 $light-blue-4: #F4F9FF
+$light-blue-5: #EFF1FF
 
 $dark-peach: #FF9900
 $light-peach: #FFF5DB
@@ -341,13 +342,35 @@ ol
 // SECTION PROMO
 
 .promo
-
+    margin-bottom: 18.1rem
+    
     &__left
         margin-right: 12rem
+        position: relative
+
+        &::before
+            @include content-position
+            @include round-shape
+            background-color: $light-peach
+            bottom: -57px
+            right: -40px
 
     &__img
         box-shadow: 10px 20px 50px rgba($color-black, 0.15)
         border-radius: 32px
+
+    &__right
+        position: relative
+
+        &::before
+            @include content-position
+            @include square-shape
+            background-color: $light-blue-5
+            top: -23px
+            left: -31px
+
+    &__info
+        @include font16-line26-font1
 
 // MEDIA QUERIES
 
@@ -418,7 +441,8 @@ ol
 
     .hero,
     .clients,
-    .help
+    .help,
+    .promo
         margin-bottom: $mb-7
 
     .img-wrapper,
@@ -549,6 +573,9 @@ ol
             margin-right: unset
             margin-bottom: 3rem
 
+            &::before
+                display: none
+
         &__right
             text-align: center
 
@@ -591,4 +618,3 @@ ol
 
         &::after
             bottom: 0
-
