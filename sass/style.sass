@@ -343,7 +343,7 @@ ol
 
 .promo
     margin-bottom: 18.1rem
-    
+
     &__left
         margin-right: 12rem
         position: relative
@@ -371,6 +371,92 @@ ol
 
     &__info
         @include font16-line26-font1
+
+// SECTION REVIEWS
+
+.reviews
+
+    &__title
+        text-align: center
+        margin-bottom: 1.7rem
+
+    &__info
+        font-size: 1.8rem
+        line-height: 2.9rem
+        color: $color-font-2
+        text-align: center
+        margin-bottom: 11.3rem
+        position: relative
+
+        &::before
+            @include content-position
+            @include dots-background
+            bottom: -222px
+            left: 230px
+            width: 196px
+            height: 154px
+            background-image: -webkit-repeating-radial-gradient(center center, $color-grey, $color-grey 4px, transparent 1px, transparent 100%)
+            background-image: -moz-repeating-radial-gradient(center center, $color-grey, $color-grey 4px, transparent 1px, transparent 100%)
+            background-image: -ms-repeating-radial-gradient(center center, $color-grey, $color-grey 4px, transparent 1px, transparent 100%)
+            background-image: repeating-radial-gradient(center center, $color-grey, $color-grey 4px, transparent 1px, transparent 100%)
+
+    &__img
+        width: 38.9rem
+        height: 38.9rem
+        border: none
+        border-radius: 500px 0px 500px 500px
+        box-shadow: 10px 20px 50px rgba(0, 0, 0, 0.15)
+        object-fit: cover
+        margin-right: 67px
+
+    &__slider
+        width: 53%
+        text-align: left
+
+        p
+            color: $color-font-1
+            font-size: 16px
+            line-height: 26px
+            width: 87%
+
+    &__subtitle
+        font-size: 24px
+        line-height: 30px
+        margin: 85px 0 21px
+
+.swiper
+    -webkit-user-select: none
+    user-select: none
+    transform: translateX(-60px)
+
+    &-wrapper
+        height: 475px !important
+        padding-left: 60px
+
+    &-slide
+        display: flex !important
+        position: relative
+
+        &::before
+            @include content-position
+            @include round-shape-border
+            bottom: 90px
+            left: -25px
+            z-index: -1
+
+    &-pagination
+        top: 270px !important
+        left: 200px !important
+
+        &-bullet
+            width: 16px !important
+            height: 16px !important
+            margin: 0 13px !important
+            background: $light-blue-2 !important
+            opacity: 1 !important
+
+            &-active
+                background: $dark-blue !important
 
 // MEDIA QUERIES
 
@@ -571,7 +657,7 @@ ol
 
         &__left
             margin-right: unset
-            margin-bottom: 3rem
+            margin-bottom: 5rem
 
             &::before
                 display: none
@@ -618,3 +704,7 @@ ol
 
         &::after
             bottom: 0
+
+    .promo__info,
+    .reviews__info
+        padding: 0 20px

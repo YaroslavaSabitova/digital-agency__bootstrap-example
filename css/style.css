@@ -358,6 +358,103 @@ ol {
   color: #565656;
 }
 
+.reviews__title {
+  text-align: center;
+  margin-bottom: 1.7rem;
+}
+.reviews__info {
+  font-size: 1.8rem;
+  line-height: 2.9rem;
+  color: #757575;
+  text-align: center;
+  margin-bottom: 11.3rem;
+  position: relative;
+}
+.reviews__info::before {
+  content: "";
+  position: absolute;
+  background-size: 20px 20px;
+  width: 40.4rem;
+  height: 15.4rem;
+  z-index: -1;
+  bottom: -222px;
+  left: 230px;
+  width: 196px;
+  height: 154px;
+  background-image: -webkit-repeating-radial-gradient(center center, #F4F4F4, #F4F4F4 4px, transparent 1px, transparent 100%);
+  background-image: repeating-radial-gradient(center center, #F4F4F4, #F4F4F4 4px, transparent 1px, transparent 100%);
+}
+.reviews__img {
+  width: 38.9rem;
+  height: 38.9rem;
+  border: none;
+  border-radius: 500px 0px 500px 500px;
+  -webkit-box-shadow: 10px 20px 50px rgba(0, 0, 0, 0.15);
+          box-shadow: 10px 20px 50px rgba(0, 0, 0, 0.15);
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-right: 67px;
+}
+.reviews__slider {
+  width: 53%;
+  text-align: left;
+}
+.reviews__slider p {
+  color: #565656;
+  font-size: 16px;
+  line-height: 26px;
+  width: 87%;
+}
+.reviews__subtitle {
+  font-size: 24px;
+  line-height: 30px;
+  margin: 85px 0 21px;
+}
+
+.swiper {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+   -ms-user-select: none;
+       user-select: none;
+  -webkit-transform: translateX(-60px);
+          transform: translateX(-60px);
+}
+.swiper-wrapper {
+  height: 475px !important;
+  padding-left: 60px;
+}
+.swiper-slide {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  position: relative;
+}
+.swiper-slide::before {
+  content: "";
+  position: absolute;
+  width: 12rem;
+  height: 12rem;
+  border-radius: 50%;
+  border: 8.8px solid #FF007A;
+  bottom: 90px;
+  left: -25px;
+  z-index: -1;
+}
+.swiper-pagination {
+  top: 270px !important;
+  left: 200px !important;
+}
+.swiper-pagination-bullet {
+  width: 16px !important;
+  height: 16px !important;
+  margin: 0 13px !important;
+  background: #E7F0FC !important;
+  opacity: 1 !important;
+}
+.swiper-pagination-bullet-active {
+  background: #2639ED !important;
+}
+
 @media (max-width: 1199px) {
   .container {
     width: 960px;
@@ -572,7 +669,7 @@ ol {
 
   .promo__left {
     margin-right: unset;
-    margin-bottom: 3rem;
+    margin-bottom: 5rem;
   }
   .promo__left::before {
     display: none;
@@ -624,6 +721,11 @@ ol {
   }
   .cards::after {
     bottom: 0;
+  }
+
+  .promo__info,
+  .reviews__info {
+    padding: 0 20px;
   }
 }
 
