@@ -25,12 +25,18 @@ $dark-green: #00DA71
 $light-green: #DEFFEE
 
 $mb-4: 4rem
-$mb-7: 7rem
+$mb-5: 5rem
+$mb-10: 10rem
 
-@mixin font16-line26-font1
+@mixin font16-line26-color1
     font-size: 1.6rem
     line-height: 2.6rem
     color: $color-font-1
+
+@mixin font24-line30-black
+    font-size: 2.4rem
+    line-height: 3rem
+    color: $color-black
 
 @mixin content-position
     content: ""
@@ -171,7 +177,7 @@ ol
         border-radius: 0px 0px 0px 20rem
 
     &__info
-        @include font16-line26-font1
+        @include font16-line26-color1
         width: 95%
         margin-bottom: 3.3rem
 
@@ -242,7 +248,7 @@ ol
             left: -40px
 
     &__info
-        @include font16-line26-font1
+        @include font16-line26-color1
         position: relative
 
         &::before
@@ -257,9 +263,7 @@ ol
             z-index: -3
 
 .subtitle
-    color: $color-black
-    font-size: 2.4rem
-    line-height: 3rem
+    @include font24-line30-black
     text-transform: capitalize
 
 .cards
@@ -370,7 +374,7 @@ ol
             left: -31px
 
     &__info
-        @include font16-line26-font1
+        @include font16-line26-color1
 
 // SECTION REVIEWS
 
@@ -414,23 +418,24 @@ ol
         text-align: left
 
         p
-            color: $color-font-1
-            font-size: 16px
-            line-height: 26px
+            @include font16-line26-color1
             width: 87%
 
     &__subtitle
-        font-size: 24px
-        line-height: 30px
-        margin: 85px 0 21px
+        margin: 85px 0 21px 12px
+        text-shadow: -0.4px 0 $color-black, 0 0.4px $color-black, 0.4px 0 $color-black, 0 -0.4px $color-black
 
 .swiper
     -webkit-user-select: none
     user-select: none
     transform: translateX(-60px)
 
+    &-button-next,
+    &-button-prev
+        display: none !important
+
     &-wrapper
-        height: 475px !important
+        height: 47.5rem !important
         padding-left: 60px
 
     &-slide
@@ -446,7 +451,7 @@ ol
 
     &-pagination
         top: 270px !important
-        left: 200px !important
+        left: 250px !important
 
         &-bullet
             width: 16px !important
@@ -457,6 +462,73 @@ ol
 
             &-active
                 background: $dark-blue !important
+
+.people
+    position: relative
+
+    &__img
+        border-radius: 50%
+        object-fit: cover
+        position: absolute
+
+        &_2,
+        &_7
+            width: 98px
+            height: 98px
+
+        &_2
+            top: -190px
+            left: 0px
+
+        &_3,
+        &_6,
+        &_8
+            width: 68px
+            height: 68px
+
+        &_3
+            top: -242px
+            left: 133px
+
+        &_4,
+        &_5
+            width: 54px
+            height: 54px
+
+        &_4
+            top: -180px
+            left: 246px
+
+        &_5
+            top: -95px
+            left: 290px
+
+        &_6
+            top: -20px
+            left: 222px
+
+        &_7
+            top: 5px
+            left: 95px
+
+        &_8
+            top: -50px
+            left: 0px
+
+        &_9
+            width: 120px
+            height: 120px
+            top: -140px
+            left: 119px
+
+    &::before
+        @include content-position
+        @include round-shape
+        width: 18.4rem
+        height: 18.4rem
+        background-color: $light-peach
+        top: -125px
+        left: 20px
 
 // MEDIA QUERIES
 
@@ -470,6 +542,39 @@ ol
 
     .hero__img
         max-width: 60rem
+
+    .reviews
+
+        &__img
+            width: 20rem
+            height: 20rem
+
+        &__info
+            margin-bottom: 10rem
+
+            &::before
+                bottom: -207px
+                left: 42px
+
+        &__subtitle
+            margin: 0px 0 21px 12px
+
+    .people
+        margin-top: 70px
+
+    .swiper
+
+        &-pagination
+            top: 229px !important
+            left: 165px !important
+
+        &-wrapper
+            height: 30.5rem !important
+
+        &-slide::before
+            width: 7rem
+            height: 7rem
+            bottom: 100px
 
 @media (max-width: 991px)
 
@@ -496,13 +601,13 @@ ol
     .clients
         margin-bottom: 8rem
 
+        &__info
+            margin: 0 auto
+            text-align: center
+
     .clients__title,
     .help__title,
     .help__info
-        text-align: center
-
-    .clients__info
-        margin: 0 auto
         text-align: center
 
     .help__info
@@ -514,6 +619,31 @@ ol
     .cards::before
         width: 93rem
 
+    .promo
+        margin-bottom: 14rem
+
+    .people
+        display: none
+
+    .reviews__info::before
+        left: 112px
+
+    .swiper
+
+        &-wrapper
+            height: 28rem !important
+            padding-left: 135px
+
+        &-slide::before
+            bottom: 76px
+
+        &-pagination
+            top: 250px !important
+            left: 100px !important
+
+            &-bullet
+                margin: 0 30px !important
+
 @media (max-width: 767px)
 
     .container
@@ -523,13 +653,13 @@ ol
         font-size: 59%
 
     .main-header
-        margin-bottom: $mb-4
+        margin-bottom: $mb-5
 
     .hero,
     .clients,
     .help,
     .promo
-        margin-bottom: $mb-7
+        margin-bottom: $mb-10
 
     .img-wrapper,
     .cards::before
@@ -657,13 +787,58 @@ ol
 
         &__left
             margin-right: unset
-            margin-bottom: 5rem
+            margin-bottom: 7rem
 
             &::before
                 display: none
 
         &__right
             text-align: center
+
+    .swiper
+        margin-left: 90px !important
+
+        &-button-next,
+        &-button-prev
+            display: block !important
+            top: 235px !important
+
+        &-slide
+            align-items: center !important
+            flex-direction: column !important
+
+            &::before
+                display: none
+
+        &-wrapper
+            padding-left: unset
+            height: 45rem !important
+
+        &-pagination
+            display: none !important
+
+    .reviews
+
+        &__img
+            margin-right: unset
+            margin-bottom: 30px
+
+        &__subtitle
+            margin: 0 auto 30px
+
+        &__slider
+            width: 70%
+            text-align: center
+
+            p
+                width: 100%
+
+        &__info
+            margin-bottom: 7rem
+
+            &::before
+                bottom: -176px
+                left: 188px
 
 @media (max-width: 575px)
 
@@ -708,3 +883,24 @@ ol
     .promo__info,
     .reviews__info
         padding: 0 20px
+
+    .reviews
+
+        &__img
+            width: 15rem
+            height: 15rem
+
+        &__info::before
+            left: 42px
+
+        &__slider
+            width: 100%
+            padding: 0 20px
+
+    .swiper
+        margin-left: unset !important
+        transform: translateX(0px)
+
+        &-button-next,
+        &-button-prev
+            top: 187px !important
