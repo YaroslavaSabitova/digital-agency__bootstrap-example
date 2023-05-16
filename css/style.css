@@ -103,8 +103,9 @@ ol {
 }
 
 .hero {
-  margin-bottom: 13.6rem;
-  overflow-x: hidden;
+  margin-bottom: 3.3rem;
+  overflow: hidden;
+  padding-bottom: 105px;
 }
 .hero__title {
   margin-bottom: 4rem;
@@ -132,7 +133,7 @@ ol {
   content: "";
   position: absolute;
   background-size: 20px 20px;
-  width: 40.4rem;
+  width: 40.5rem;
   height: 15.4rem;
   z-index: -1;
   top: 25px;
@@ -168,7 +169,7 @@ ol {
 }
 
 .clients {
-  margin-bottom: 9.4rem;
+  margin-bottom: 4.4rem;
 }
 .clients__title {
   margin-bottom: 1.7rem;
@@ -218,10 +219,10 @@ ol {
   content: "";
   position: absolute;
   background-size: 20px 20px;
-  width: 40.4rem;
+  width: 40.5rem;
   height: 15.4rem;
   z-index: -1;
-  top: 170px;
+  top: 177px;
   left: -8px;
   background-image: -webkit-repeating-radial-gradient(center center, #E7F0FC, #E7F0FC 4px, transparent 1px, transparent 100%);
   background-image: repeating-radial-gradient(center center, #E7F0FC, #E7F0FC 4px, transparent 1px, transparent 100%);
@@ -237,13 +238,14 @@ ol {
 
 .cards {
   position: relative;
+  padding: 50px 0;
 }
 .cards::before, .cards::after {
   content: "";
   position: absolute;
 }
 .cards::before {
-  top: 133px;
+  top: 190px;
   left: -155px;
   width: 104.7rem;
   height: 61.9rem;
@@ -256,7 +258,7 @@ ol {
   height: 12rem;
   border-radius: 50%;
   border: 8.8px solid #FF007A;
-  bottom: 29px;
+  bottom: 75px;
   right: 39px;
   z-index: -3;
 }
@@ -379,7 +381,7 @@ ol {
   content: "";
   position: absolute;
   background-size: 20px 20px;
-  width: 40.4rem;
+  width: 40.5rem;
   height: 15.4rem;
   z-index: -1;
   bottom: -222px;
@@ -544,6 +546,15 @@ ol {
   .hero__img {
     max-width: 60rem;
   }
+  .hero__button::before {
+    width: 30rem;
+    height: 13rem;
+  }
+
+  .help__info::before {
+    height: 14rem;
+    top: 195px;
+  }
 
   .reviews__img {
     width: 20rem;
@@ -592,6 +603,7 @@ ol {
 
   .hero {
     text-align: center;
+    margin-bottom: 5rem;
   }
   .hero__info {
     margin: 0 auto 3.3rem;
@@ -605,7 +617,7 @@ ol {
   }
 
   .clients {
-    margin-bottom: 8rem;
+    margin-bottom: 10rem;
   }
   .clients__info {
     margin: 0 auto;
@@ -621,11 +633,14 @@ ol {
     text-align: center;
   }
 
-  .help__info {
-    margin-bottom: 4rem;
+  .help {
+    overflow-x: visible;
+    margin-bottom: 9.6rem;
   }
   .help__info::before {
-    top: 92px;
+    width: 38rem;
+    top: 75px;
+    left: 80px;
   }
 
   .cards::before {
@@ -690,7 +705,13 @@ ol {
   .clients,
   .help,
   .promo {
-    margin-bottom: 10rem;
+    margin-bottom: 8rem;
+  }
+
+  .help__info::before {
+    height: 13rem;
+    top: 98px;
+    left: 70px;
   }
 
   .img-wrapper,
@@ -698,6 +719,9 @@ ol {
     display: none;
   }
 
+  .hero {
+    padding-bottom: 20px;
+  }
   .hero__title {
     margin-bottom: 2rem;
   }

@@ -26,7 +26,7 @@ $light-green: #DEFFEE
 
 $mb-4: 4rem
 $mb-5: 5rem
-$mb-10: 10rem
+$mb-8: 8rem
 
 @mixin font16-line26-color1
     font-size: 1.6rem
@@ -66,7 +66,7 @@ $mb-10: 10rem
     -webkit-background-size: 20px 20px
     -moz-background-size: 20px 20px
     background-size: 20px 20px
-    width: 40.4rem
+    width: 40.5rem
     height: 15.4rem
     z-index: -1
 
@@ -165,8 +165,9 @@ ol
 // SECTION HERO
 
 .hero
-    margin-bottom: 13.6rem
-    overflow-x: hidden
+    margin-bottom: 3.3rem
+    overflow: hidden
+    padding-bottom: 105px
 
     &__title
         margin-bottom: $mb-4
@@ -217,7 +218,7 @@ ol
 // SECTION CLIENTS
 
 .clients
-    margin-bottom: 9.4rem
+    margin-bottom: 4.4rem
 
     &__title
         margin-bottom: 1.7rem
@@ -259,7 +260,7 @@ ol
         &::before
             @include content-position
             @include dots-background
-            top: 170px
+            top: 177px
             left: -8px
             background-image: -webkit-repeating-radial-gradient(center center, $light-blue-2, $light-blue-2 4px, transparent 1px, transparent 100%)
             background-image: -moz-repeating-radial-gradient(center center, $light-blue-2, $light-blue-2 4px, transparent 1px, transparent 100%)
@@ -273,13 +274,14 @@ ol
 
 .cards
     position: relative
+    padding: 50px 0
 
     &::before,
     &::after
         @include content-position
 
     &::before
-        top: 133px
+        top: 190px
         left: -155px
         width: 104.7rem
         height: 61.9rem
@@ -289,7 +291,7 @@ ol
 
     &::after
         @include round-shape-border
-        bottom: 29px
+        bottom: 75px
         right: 39px
         z-index: -3
 
@@ -545,8 +547,18 @@ ol
     html
         font-size: 61%
 
-    .hero__img
-        max-width: 60rem
+    .hero
+
+        &__img
+            max-width: 60rem
+
+        &__button::before
+            width: 30rem
+            height: 13rem
+
+    .help__info::before
+        height: 14rem
+        top: 195px
 
     .reviews
 
@@ -595,6 +607,7 @@ ol
 
     .hero
         text-align: center
+        margin-bottom: 5rem
 
         &__info
             margin: 0 auto 3.3rem
@@ -608,7 +621,7 @@ ol
             right: 5px
 
     .clients
-        margin-bottom: 8rem
+        margin-bottom: 10rem
 
         &__info
             margin: 0 auto
@@ -622,11 +635,14 @@ ol
     .help__info
         text-align: center
 
-    .help__info
-        margin-bottom: 4rem
+    .help
+        overflow-x: visible
+        margin-bottom: 9.6rem
 
-        &::before
-            top: 92px
+        &__info::before
+            width: 38rem
+            top: 75px
+            left: 80px
 
     .cards::before
         width: 93rem
@@ -684,13 +700,20 @@ ol
     .clients,
     .help,
     .promo
-        margin-bottom: $mb-10
+        margin-bottom: $mb-8
+
+    .help
+        &__info::before
+            height: 13rem
+            top: 98px
+            left: 70px
 
     .img-wrapper,
     .cards::before
         display: none
 
     .hero
+        padding-bottom: 20px
 
         &__title
             margin-bottom: 2rem
