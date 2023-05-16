@@ -181,15 +181,12 @@ ol {
   font-size: 1.8rem;
   line-height: 2.9rem;
 }
-.clients__logo {
-  height: 13rem;
-}
 .clients__img_amazon {
   margin-top: 23px;
 }
 
 .help {
-  margin-bottom: 14.6rem;
+  margin-bottom: 9.6rem;
   overflow-x: hidden;
 }
 .help__title {
