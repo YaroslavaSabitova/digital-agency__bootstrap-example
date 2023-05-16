@@ -232,6 +232,9 @@ ol
     &__logo
         height: 13rem
 
+    &__img_amazon
+        margin-top: 23px
+
 // SECTION HELP
 
 .help
@@ -550,6 +553,7 @@ ol
         &__img
             width: 20rem
             height: 20rem
+            margin-right: 75px
 
         &__info
             margin-bottom: 10rem
@@ -560,6 +564,9 @@ ol
 
         &__subtitle
             margin: 0px 0 21px 12px
+
+        &__slider p
+            width: 90%
 
     .people
         margin-top: 70px
@@ -607,6 +614,9 @@ ol
             margin: 0 auto
             text-align: center
 
+        &__logo
+            height: 15rem
+
     .clients__title,
     .help__title,
     .help__info
@@ -627,21 +637,34 @@ ol
     .people
         display: none
 
-    .reviews__info::before
-        left: 112px
+    .reviews
+
+        &__info
+            margin-bottom: 8rem
+
+        &__slider
+            text-align: center
+
+            p
+                width: 100%
+
+        &__info::before
+            left: 100px
+            bottom: -190px
 
     .swiper
+        margin-left: unset !important
+        transform: translateX(0px)
 
         &-wrapper
             height: 28rem !important
-            padding-left: 135px
 
         &-slide::before
             bottom: 76px
 
         &-pagination
             top: 250px !important
-            left: 100px !important
+            left: 10px !important
 
             &-bullet
                 margin: 0 30px !important
@@ -668,7 +691,6 @@ ol
         display: none
 
     .hero
-        
 
         &__title
             margin-bottom: 2rem
@@ -799,7 +821,9 @@ ol
             text-align: center
 
     .swiper
-        margin-left: 90px !important
+
+        &-wrapper
+            padding-left: unset
 
         &-button-next,
         &-button-prev
@@ -814,7 +838,6 @@ ol
                 display: none
 
         &-wrapper
-            padding-left: unset
             height: 45rem !important
 
         &-pagination
@@ -831,17 +854,13 @@ ol
 
         &__slider
             width: 70%
-            text-align: center
-
-            p
-                width: 100%
 
         &__info
             margin-bottom: 7rem
 
             &::before
                 bottom: -176px
-                left: 188px
+                left: 200px
 
 @media (max-width: 575px)
 
@@ -868,6 +887,9 @@ ol
 
         &__img
             width: 110px
+
+            &_amazon
+                margin-top: 15px
 
     .help__title,
     .help__info
@@ -901,9 +923,6 @@ ol
             padding: 0 20px
 
     .swiper
-        margin-left: unset !important
-        transform: translateX(0px)
-
         &-button-next,
         &-button-prev
             top: 187px !important

@@ -183,6 +183,9 @@ ol {
 .clients__logo {
   height: 13rem;
 }
+.clients__img_amazon {
+  margin-top: 23px;
+}
 
 .help {
   margin-bottom: 14.6rem;
@@ -545,6 +548,7 @@ ol {
   .reviews__img {
     width: 20rem;
     height: 20rem;
+    margin-right: 75px;
   }
   .reviews__info {
     margin-bottom: 10rem;
@@ -555,6 +559,9 @@ ol {
   }
   .reviews__subtitle {
     margin: 0px 0 21px 12px;
+  }
+  .reviews__slider p {
+    width: 90%;
   }
 
   .people {
@@ -604,6 +611,9 @@ ol {
     margin: 0 auto;
     text-align: center;
   }
+  .clients__logo {
+    height: 15rem;
+  }
 
   .clients__title,
   .help__title,
@@ -630,20 +640,34 @@ ol {
     display: none;
   }
 
+  .reviews__info {
+    margin-bottom: 8rem;
+  }
+  .reviews__slider {
+    text-align: center;
+  }
+  .reviews__slider p {
+    width: 100%;
+  }
   .reviews__info::before {
-    left: 112px;
+    left: 100px;
+    bottom: -190px;
   }
 
+  .swiper {
+    margin-left: unset !important;
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
   .swiper-wrapper {
     height: 28rem !important;
-    padding-left: 135px;
   }
   .swiper-slide::before {
     bottom: 76px;
   }
   .swiper-pagination {
     top: 250px !important;
-    left: 100px !important;
+    left: 10px !important;
   }
   .swiper-pagination-bullet {
     margin: 0 30px !important;
@@ -810,8 +834,8 @@ ol {
     text-align: center;
   }
 
-  .swiper {
-    margin-left: 90px !important;
+  .swiper-wrapper {
+    padding-left: unset;
   }
   .swiper-button-next, .swiper-button-prev {
     display: block !important;
@@ -830,7 +854,6 @@ ol {
     display: none;
   }
   .swiper-wrapper {
-    padding-left: unset;
     height: 45rem !important;
   }
   .swiper-pagination {
@@ -846,17 +869,13 @@ ol {
   }
   .reviews__slider {
     width: 70%;
-    text-align: center;
-  }
-  .reviews__slider p {
-    width: 100%;
   }
   .reviews__info {
     margin-bottom: 7rem;
   }
   .reviews__info::before {
     bottom: -176px;
-    left: 188px;
+    left: 200px;
   }
 }
 @media (max-width: 575px) {
@@ -883,6 +902,9 @@ ol {
   }
   .clients__img {
     width: 110px;
+  }
+  .clients__img_amazon {
+    margin-top: 15px;
   }
 
   .help__title,
@@ -921,11 +943,6 @@ ol {
     padding: 0 20px;
   }
 
-  .swiper {
-    margin-left: unset !important;
-    -webkit-transform: translateX(0px);
-            transform: translateX(0px);
-  }
   .swiper-button-next, .swiper-button-prev {
     top: 187px !important;
   }
