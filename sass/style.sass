@@ -29,7 +29,7 @@ $light-green: #DEFFEE
 
 $mb-4: 4rem
 $mb-5: 5rem
-$mb-8: 8rem
+$mb-9: 9rem
 
 @mixin font16-line2
     font-size: 1.6rem
@@ -395,7 +395,7 @@ ol
 // SECTION REVIEWS
 
 .reviews
-    margin-bottom: 6.8rem
+    margin-bottom: 3.8rem
 
     &__title
         text-align: center
@@ -404,7 +404,7 @@ ol
     &__info
         @include font18-line29-color2
         text-align: center
-        margin-bottom: 11.3rem
+        margin-bottom: 8.3rem
         position: relative
 
         &::before
@@ -452,6 +452,7 @@ ol
     &-wrapper
         height: 47.5rem !important
         padding-left: 60px
+        padding-top: 30px
 
     &-slide
         display: flex !important
@@ -465,8 +466,8 @@ ol
             z-index: -1
 
     &-pagination
-        top: 270px !important
-        left: 250px !important
+        bottom: 165px !important
+        left: 235px !important
 
         &-bullet
             width: 16px !important
@@ -548,6 +549,7 @@ ol
 // SECTION SUBSCRIBE
 
 .subscribe
+    margin-bottom: 14.6rem
 
     &__light
         text-align: end
@@ -642,7 +644,7 @@ ol
         top: 195px
 
     .reviews
-        margin-bottom: 15rem
+        margin-bottom: 14rem
 
         &__img
             width: 20rem
@@ -650,7 +652,7 @@ ol
             margin-right: 75px
 
         &__info
-            margin-bottom: 10rem
+            margin-bottom: 7rem
 
             &::before
                 bottom: -207px
@@ -668,8 +670,8 @@ ol
     .swiper
 
         &-pagination
-            top: 229px !important
-            left: 165px !important
+            bottom: 64px !important
+            left: 134px !important
 
         &-wrapper
             height: 30.5rem !important
@@ -744,7 +746,7 @@ ol
         width: 93rem
 
     .promo
-        margin-bottom: 14rem
+        margin-bottom: 12rem
 
     .people
         display: none
@@ -752,7 +754,7 @@ ol
     .reviews
 
         &__info
-            margin-bottom: 8rem
+            margin-bottom: 5rem
 
         &__slider
             text-align: center
@@ -761,7 +763,7 @@ ol
                 width: 100%
 
         &__info::before
-            left: 100px
+            left: 115px
             bottom: -190px
 
     .swiper
@@ -775,8 +777,8 @@ ol
             bottom: 76px
 
         &-pagination
-            top: 250px !important
-            left: 10px !important
+            bottom: 10px !important
+            left: 25px !important
 
             &-bullet
                 margin: 0 30px !important
@@ -819,7 +821,7 @@ ol
     .promo,
     .reviews,
     .subscribe
-        margin-bottom: $mb-8
+        margin-bottom: $mb-9
 
     .help
         &__info::before
@@ -970,7 +972,7 @@ ol
         &-button-next,
         &-button-prev
             display: block !important
-            top: 235px !important
+            top: 265px !important
 
         &-slide
             align-items: center !important
@@ -998,11 +1000,11 @@ ol
             width: 70%
 
         &__info
-            margin-bottom: 7rem
+            margin-bottom: 4rem
 
             &::before
                 bottom: -176px
-                left: 200px
+                left: 223px
 
 @media (max-width: 575px)
 
@@ -1057,20 +1059,25 @@ ol
             width: 15rem
             height: 15rem
 
-        &__info::before
-            left: 42px
+        &__info
+            margin-bottom: 2rem
+
+            &::before
+                top: 60px
+                left: 42px
 
         &__slider
             width: 100%
             padding: 0 20px
 
     .swiper
+        
         &-wrapper
             height: 35rem !important
 
         &-button-next,
         &-button-prev
-            top: 187px !important
+            top: 215px !important
 
     .subscribe
 
