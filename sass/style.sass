@@ -3,10 +3,12 @@
 $color-white: #ffffff
 $color-grey: #F4F4F4
 $color-grey-2: #F2F2F2
+$color-input: #F1F1F1
 $color-black: #000000
 
 $color-font-1: #565656
 $color-font-2: #757575
+$color-font-3: #959595
 
 $dark-blue: #2639ED
 $light-blue-1: #DAE9FF
@@ -28,10 +30,19 @@ $mb-4: 4rem
 $mb-5: 5rem
 $mb-8: 8rem
 
+@mixin font16-line2
+    font-size: 1.6rem
+    line-height: 2rem
+
 @mixin font16-line26-color1
     font-size: 1.6rem
     line-height: 2.6rem
     color: $color-font-1
+
+@mixin font18-line29-color2
+    font-size: 1.8rem
+    line-height: 2.9rem
+    color: $color-font-2
 
 @mixin font24-line30-black
     font-size: 2.4rem
@@ -109,9 +120,8 @@ h1, h2, h3, h4, h5
     margin: 0
 
 a
+    @include font16-line2
     color: $color-black
-    font-size: 1.6rem
-    line-height: 2rem
     text-transform: capitalize
     text-decoration: none
     transition: .3s
@@ -142,7 +152,10 @@ ol
     letter-spacing: 0.065em
     text-transform: capitalize
     text-shadow: -0.5px 0 $color-white, 0 0.5px $color-white, 0.5px 0 $color-white, 0 -0.5px $color-white
+    border: none
     padding: 2rem 4rem
+
+.radius
     border-radius: 60px
 
 // HEADER
@@ -225,10 +238,8 @@ ol
         text-transform: capitalize
 
     &__info
+        @include font18-line29-color2
         width: 90%
-        color: $color-font-2
-        font-size: 1.8rem
-        line-height: 2.9rem
 
     &__img_amazon
         margin-top: 23px
@@ -383,15 +394,14 @@ ol
 // SECTION REVIEWS
 
 .reviews
+    margin-bottom: 6.8rem
 
     &__title
         text-align: center
         margin-bottom: 1.7rem
 
     &__info
-        font-size: 1.8rem
-        line-height: 2.9rem
-        color: $color-font-2
+        @include font18-line29-color2
         text-align: center
         margin-bottom: 11.3rem
         position: relative
@@ -534,6 +544,57 @@ ol
         top: -125px
         left: 20px
 
+// SECTION SUBSCRIBE
+
+.subscribe
+
+    &__light
+        text-align: end
+        width: 100%
+        height: 29.2rem
+        background-color: $light-blue-4
+        border-radius: 75px
+        padding-left: 8rem
+
+    &__dark
+        background: url(../img/subscribe-bg.png) center/cover no-repeat
+        width: 498px
+        padding-right: 9.2rem
+
+    &__info
+        text-align: left
+
+    &__title
+        text-transform: capitalize
+        margin-bottom: 1.7rem
+
+    &__text
+        @include font18-line29-color2
+
+    &__button
+        @include font16-line2
+        position: absolute
+        top: 11px
+        right: 57px
+
+    &__search
+        position: relative
+
+        input
+            width: 47.9rem
+            padding: 3rem 3.4rem
+            border: 1px solid $color-input
+            box-shadow: 10px 20px 50px rgba($color-black, 0.15)
+            transform: translateX(-43px)
+
+.search
+    @include font16-line2
+    color: $color-font-3
+
+    label
+        position: absolute
+        clip: rect(0 0 0 0)
+
 // MEDIA QUERIES
 
 @media (max-width: 1199px)
@@ -558,6 +619,7 @@ ol
         top: 195px
 
     .reviews
+        margin-bottom: 15rem
 
         &__img
             width: 20rem
@@ -593,6 +655,20 @@ ol
             width: 7rem
             height: 7rem
             bottom: 100px
+
+    .subscribe
+
+        &__info
+            width: 43%
+
+        &__dark
+            width: 484px
+
+        &__search input
+            transform: translateX(10px)
+
+        &__button
+            right: 2px
 
 @media (max-width: 991px)
 
@@ -682,6 +758,27 @@ ol
             &-bullet
                 margin: 0 30px !important
 
+    .subscribe
+
+        &__light
+            padding-left: unset
+
+        &__dark
+            margin: 0 auto
+            background: none
+            width: 0px
+            padding-right: unset
+
+        &__info
+            width: 100%
+            text-align: center
+
+        &__search input
+            transform: translateX(0px)
+
+        &__button
+            right: 12px
+
 @media (max-width: 767px)
 
     .container
@@ -696,7 +793,9 @@ ol
     .hero,
     .clients,
     .help,
-    .promo
+    .promo,
+    .reviews,
+    .subscribe
         margin-bottom: $mb-8
 
     .help
@@ -858,7 +957,7 @@ ol
                 display: none
 
         &-wrapper
-            height: 45rem !important
+            height: 42rem !important
 
         &-pagination
             display: none !important
@@ -943,6 +1042,28 @@ ol
             padding: 0 20px
 
     .swiper
+        &-wrapper
+            height: 35rem !important
+
         &-button-next,
         &-button-prev
             top: 187px !important
+
+    .subscribe
+
+        &__light
+            padding: 0rem 1rem
+            height: 45rem
+
+        &__text
+            width: 74%
+            margin: 0 auto
+
+        &__search input
+            width: 30rem
+            padding: 2rem
+            text-align: center
+
+        &__button
+            top: -80px
+            right: 55px
