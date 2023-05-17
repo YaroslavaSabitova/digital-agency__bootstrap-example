@@ -16,6 +16,7 @@ $light-blue-2: #E7F0FC
 $light-blue-3: #F1F7FF
 $light-blue-4: #F4F9FF
 $light-blue-5: #EFF1FF
+$light-blue-6: #DFEEFF
 
 $dark-peach: #FF9900
 $light-peach: #FFF5DB
@@ -555,6 +556,28 @@ ol
         background-color: $light-blue-4
         border-radius: 75px
         padding-left: 8rem
+        position: relative
+
+        &::before,
+        &::after
+            @include content-position
+
+        &::before
+            @include square-shape
+            top: 150px
+            left: -40px
+            transform: rotate(90deg)
+
+        &::after
+            @include dots-background
+            top: -65px
+            right: -40px
+            width: 175px
+            height: 154px
+            background-image: -webkit-repeating-radial-gradient(center center, $light-blue-6, $light-blue-6 4px, transparent 1px, transparent 100%)
+            background-image: -moz-repeating-radial-gradient(center center, $light-blue-6, $light-blue-6 4px, transparent 1px, transparent 100%)
+            background-image: -ms-repeating-radial-gradient(center center, $light-blue-6, $light-blue-6 4px, transparent 1px, transparent 100%)
+            background-image: repeating-radial-gradient(center center, $light-blue-6, $light-blue-6 4px, transparent 1px, transparent 100%)
 
     &__dark
         background: url(../img/subscribe-bg.png) center/cover no-repeat
@@ -1054,6 +1077,12 @@ ol
         &__light
             padding: 0rem 1rem
             height: 45rem
+
+            &::before
+                top: 285px
+
+            &::after
+                display: none
 
         &__text
             width: 74%
