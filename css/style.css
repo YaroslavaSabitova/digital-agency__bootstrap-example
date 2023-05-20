@@ -919,7 +919,7 @@ ol {
     text-align: center;
   }
   .navigation__item:not(:last-child) {
-    margin-bottom: 6rem;
+    margin-bottom: 5rem;
   }
   .navigation__link {
     display: inline-block;
@@ -1110,8 +1110,9 @@ ol {
   }
 
   .subscribe__light {
-    padding: 0rem 1rem;
+    padding: 4rem 2rem;
     height: 45rem;
+    position: relative;
   }
   .subscribe__light::before {
     top: 285px;
@@ -1120,8 +1121,12 @@ ol {
     display: none;
   }
   .subscribe__text {
-    width: 74%;
+    width: 90%;
     margin: 0 auto;
+  }
+  .subscribe__search {
+    position: absolute;
+    top: 50%;
   }
   .subscribe__search input {
     width: 30rem;
@@ -1129,8 +1134,12 @@ ol {
     text-align: center;
   }
   .subscribe__button {
-    top: -80px;
-    right: 55px;
+    width: 180px;
+    top: 50%;
+    right: 0;
+    -webkit-transform: translate(-50%, 140%);
+            transform: translate(-50%, 140%);
+    left: 50%;
   }
 }
 

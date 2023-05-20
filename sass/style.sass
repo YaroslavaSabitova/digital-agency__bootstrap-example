@@ -897,7 +897,7 @@ ol
             text-align: center
 
             &:not(:last-child)
-                margin-bottom: 6rem
+                margin-bottom: 5rem
 
         &__link
             display: inline-block
@@ -1071,7 +1071,7 @@ ol
             padding: 0 20px
 
     .swiper
-        
+
         &-wrapper
             height: 35rem !important
 
@@ -1082,8 +1082,9 @@ ol
     .subscribe
 
         &__light
-            padding: 0rem 1rem
+            padding: 4rem 2rem
             height: 45rem
+            position: relative
 
             &::before
                 top: 285px
@@ -1092,14 +1093,21 @@ ol
                 display: none
 
         &__text
-            width: 74%
+            width: 90%
             margin: 0 auto
 
-        &__search input
-            width: 30rem
-            padding: 2rem
-            text-align: center
+        &__search
+            position: absolute
+            top: 50%
+
+            input
+                width: 30rem
+                padding: 2rem
+                text-align: center
 
         &__button
-            top: -80px
-            right: 55px
+            width: 180px
+            top: 50%
+            right: 0
+            transform: translate(-50%, 140%)
+            left: 50%
