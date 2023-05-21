@@ -69,6 +69,10 @@ ol {
   margin-top: 7rem;
 }
 
+.radius {
+  border-radius: 60px;
+}
+
 .title {
   font-size: 4rem;
   line-height: 4.9rem;
@@ -86,24 +90,139 @@ ol {
   padding: 2rem 4rem;
 }
 
-.radius {
+.button-flashing {
+  display: inline-block;
+  position: relative;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+.button-flashing::before {
+  content: "";
+  position: absolute;
+  background-color: #DAE9FF;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
   border-radius: 60px;
+  display: inline-block;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+  -webkit-animation: flashing 1.5s linear infinite;
+          animation: flashing 1.5s linear infinite;
 }
 
+@-webkit-keyframes flashing {
+  0% {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+    opacity: -1;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1.3, 1.5);
+            transform: scale(1.3, 1.5);
+    opacity: -1;
+  }
+}
+
+@keyframes flashing {
+  0% {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+    opacity: -1;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1.3, 1.5);
+            transform: scale(1.3, 1.5);
+    opacity: -1;
+  }
+}
+.button-scaling {
+  display: inline-block;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-animation: scaling 2s linear infinite alternate;
+          animation: scaling 2s linear infinite alternate;
+}
+
+@-webkit-keyframes scaling {
+  0%, 100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+}
+
+@keyframes scaling {
+  0%, 100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+}
 .main-header {
   padding-top: 4.2rem;
   margin-bottom: 4rem;
-}
-
-.nav-link {
-  text-shadow: -0.2px 0 #000000, 0 0.2px #000000, 0.2px 0 #000000, 0 -0.2px #000000;
 }
 
 .navigation__toggle {
   display: none;
 }
 .navigation__link {
+  display: inline-block;
+  position: relative;
   text-shadow: -0.2px 0 #000000, 0 0.2px #000000, 0.2px 0 #000000, 0 -0.2px #000000;
+}
+.navigation__link_back {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #2639ED;
+  text-shadow: -0.2px 0 #2639ED, 0 0.2px #2639ED, 0.2px 0 #2639ED, 0 -0.2px #2639ED;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0;
+  -webkit-transition-delay: 0.6s;
+          transition-delay: 0.6s;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+.navigation__link_base {
+  position: relative;
+  display: block;
+  z-index: 2;
+  -webkit-clip-path: inset(0 0 0 0);
+          clip-path: inset(0 0 0 0);
+  -webkit-transition: -webkit-clip-path 0.6s cubic-bezier(0.63, 0.03, 0.21, 1);
+  transition: -webkit-clip-path 0.6s cubic-bezier(0.63, 0.03, 0.21, 1);
+  transition: clip-path 0.6s cubic-bezier(0.63, 0.03, 0.21, 1);
+  transition: clip-path 0.6s cubic-bezier(0.63, 0.03, 0.21, 1), -webkit-clip-path 0.6s cubic-bezier(0.63, 0.03, 0.21, 1);
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+.navigation__link:hover .navigation__link_back {
+  opacity: 1;
+  -webkit-transition-delay: 0s;
+          transition-delay: 0s;
+}
+.navigation__link:hover .navigation__link_base {
+  -webkit-clip-path: inset(0 0 0 100%);
+          clip-path: inset(0 0 0 100%);
 }
 
 .hero {
@@ -133,7 +252,7 @@ ol {
   line-height: 2.5rem;
   position: relative;
 }
-.hero__button::before {
+.hero__button::after {
   content: "";
   position: absolute;
   background-size: 20px 20px;
@@ -274,9 +393,31 @@ ol {
   height: 37.9rem;
   padding: 3.9rem 3rem 5.7rem;
   position: relative;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.card:hover {
+  border: 1px solid #E4E4E4;
+}
+.card:hover .card__icon_blue, .card:hover .card__icon_peach, .card:hover .card__icon_pink, .card:hover .card__icon_green {
+  color: #ffffff;
+}
+.card:hover .card__icon-box_blue {
+  background-color: #2639ED;
+}
+.card:hover .card__icon-box_peach {
+  background-color: #FF9900;
+}
+.card:hover .card__icon-box_pink {
+  background-color: #FF007A;
+}
+.card:hover .card__icon-box_green {
+  background-color: #00DA71;
 }
 .card__icon {
   font-size: 7.4rem;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 .card__icon_blue {
   color: #2639ED;
@@ -293,8 +434,11 @@ ol {
 .card__icon-box {
   width: 121px;
   height: 121px;
+  border: 1px solid #ffffff;
   border-radius: 20px;
   margin-bottom: 3.1rem;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 .card__icon-box_blue {
   background-color: #F1F7FF;
@@ -661,6 +805,11 @@ ol {
   width: 36px;
   height: 36px;
   border-radius: 50%;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.socials__link:hover {
+  background-color: #2639ED;
 }
 .socials__link_facebook {
   background-color: #3b5998;
@@ -706,7 +855,7 @@ ol {
   .hero__img {
     max-width: 60rem;
   }
-  .hero__button::before {
+  .hero__button::after {
     width: 30rem;
     height: 13rem;
   }
@@ -933,7 +1082,7 @@ ol {
   .hero__title {
     margin-bottom: 2rem;
   }
-  .hero__button::before {
+  .hero__button::after {
     top: -40px;
   }
 
@@ -1007,6 +1156,16 @@ ol {
     padding: 1rem 2rem;
     -webkit-transition: all 0.7s;
     transition: all 0.7s;
+  }
+  .navigation__link_back {
+    display: none;
+  }
+  .navigation__link_base, .navigation__link:hover .navigation__link_base {
+    -webkit-clip-path: unset;
+            clip-path: unset;
+  }
+  .navigation__link:hover, .navigation__link:active {
+    color: #2639ED;
   }
   .navigation__toggle:checked ~ .navigation__nav {
     display: block;
@@ -1131,13 +1290,13 @@ ol {
     font-size: 58%;
   }
 
-  .hero__button::before,
+  .hero__button::after,
   .help__info::before {
     display: none;
   }
 
   .hero__info {
-    margin: 0 auto 2rem;
+    margin: 0 auto 4rem;
   }
 
   .clients__logo {
@@ -1224,11 +1383,9 @@ ol {
   }
   .subscribe__button {
     width: 180px;
-    top: 50%;
+    top: 175%;
     right: 0;
-    -webkit-transform: translate(-50%, 140%);
-            transform: translate(-50%, 140%);
-    left: 50%;
+    left: 18%;
   }
 
   .main-footer__info {
