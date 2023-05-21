@@ -434,7 +434,6 @@ ol {
 .card__icon-box {
   width: 121px;
   height: 121px;
-  border: 1px solid #ffffff;
   border-radius: 20px;
   margin-bottom: 3.1rem;
   -webkit-transition: all 0.3s;
