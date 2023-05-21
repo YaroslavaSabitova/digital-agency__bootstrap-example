@@ -39,40 +39,17 @@
 }
 
 
-.icon-facebook .path1:before {
-  content: "\e904";
-  color: rgb(59, 89, 152);
-}
-
-
-.icon-facebook .path2:before {
+.icon-facebook:before {
   content: "\e905";
-  margin-left: -1em;
   color: rgb(255, 255, 255);
 }
 
-
-.icon-linkedin .path1:before {
-  content: "\e906";
-  color: rgb(0, 122, 185);
-}
-
-
-.icon-linkedin .path2:before {
+.icon-linkedin:before {
   content: "\e907";
-  margin-left: -1em;
   color: rgb(241, 242, 242);
 }
 
-
-.icon-twitter .path1:before {
-  content: "\e908";
-  color: rgb(85, 172, 238);
-}
-
-
-.icon-twitter .path2:before {
+.icon-twitter:before {
   content: "\e909";
-  margin-left: -1em;
   color: rgb(241, 242, 242);
 }

@@ -29,7 +29,7 @@ body {
   color: #000000;
   background-color: #ffffff;
   overflow-x: hidden;
-  padding-bottom: 100rem;
+  padding-bottom: 6.2rem;
 }
 
 img {
@@ -625,6 +625,75 @@ ol {
   clip: rect(0 0 0 0);
 }
 
+.main-footer .container {
+  border-top: 1px solid #E4E4E4;
+  border-bottom: 1px solid #F2F2F2;
+  padding-top: 6.3rem;
+  padding-bottom: 2.9rem;
+}
+
+.main-footer__info {
+  font-size: 1.4rem;
+  line-height: 2.2rem;
+  color: #565656;
+  margin-bottom: 4rem;
+}
+.main-footer__logo {
+  margin-bottom: 2.4rem;
+}
+
+.socials {
+  width: 50%;
+}
+.socials__icon {
+  font-size: 36px;
+}
+.socials__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+}
+.socials__link_facebook {
+  background-color: #3b5998;
+}
+.socials__link_twitter {
+  background-color: #55acee;
+}
+.socials__link_linkedin {
+  background-color: #007ab9;
+}
+
+.list {
+  text-transform: capitalize;
+}
+.list__what-we-do {
+  padding-left: 10.5rem;
+}
+.list__company {
+  padding-left: 6rem;
+}
+.list__title {
+  text-shadow: -0.4px 0 #000000, 0 0.4px #000000, 0.4px 0 #000000, 0 -0.4px #000000;
+  margin-bottom: 2.4rem;
+}
+.list__title a {
+  font-size: 20px;
+  line-height: 25px;
+}
+.list__link {
+  font-size: 1.4rem;
+  line-height: 2.8rem;
+}
+
 @media (max-width: 1199px) {
   .container {
     width: 960px;
@@ -698,6 +767,10 @@ ol {
   }
   .subscribe__button {
     right: 2px;
+  }
+
+  .list__what-we-do, .list__company, .list__support {
+    padding-left: unset;
   }
 }
 @media (max-width: 991px) {
@@ -815,6 +888,10 @@ ol {
   }
   .subscribe__button {
     right: 12px;
+  }
+
+  .socials {
+    width: 100%;
   }
 }
 @media (max-width: 767px) {
@@ -1032,6 +1109,18 @@ ol {
     bottom: -176px;
     left: 223px;
   }
+
+  .list__what-we-do {
+    margin-bottom: 10rem;
+  }
+
+  .socials {
+    position: absolute;
+    width: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
+  }
 }
 @media (max-width: 575px) {
   .container {
@@ -1140,6 +1229,20 @@ ol {
     -webkit-transform: translate(-50%, 140%);
             transform: translate(-50%, 140%);
     left: 50%;
+  }
+
+  .main-footer__info {
+    text-align: center;
+    margin-bottom: 12rem;
+  }
+
+  .socials {
+    -webkit-transform: translate(-50%, -200%);
+            transform: translate(-50%, -200%);
+  }
+
+  .list__what-we-do {
+    margin-bottom: 5rem;
   }
 }
 

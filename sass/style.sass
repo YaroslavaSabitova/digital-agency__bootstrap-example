@@ -3,6 +3,7 @@
 $color-white: #ffffff
 $color-grey: #F4F4F4
 $color-grey-2: #F2F2F2
+$color-grey-3: #E4E4E4
 $color-input: #F1F1F1
 $color-black: #000000
 
@@ -26,6 +27,10 @@ $light-pink: #FFF2F8
 
 $dark-green: #00DA71
 $light-green: #DEFFEE
+
+$color-facebook: rgb(59, 89, 152)
+$color-twitter: rgb(85, 172, 238)
+$color-linkedin: rgb(0, 122, 185)
 
 $mb-4: 4rem
 $mb-5: 5rem
@@ -111,7 +116,7 @@ body
     color: $color-black
     background-color: $color-white
     overflow-x: hidden
-    padding-bottom: 100rem
+    padding-bottom: 6.2rem
 
 img
     max-width: 100%
@@ -620,6 +625,69 @@ ol
         position: absolute
         clip: rect(0 0 0 0)
 
+// FOOTER
+
+.main-footer .container
+    border-top: 1px solid $color-grey-3
+    border-bottom: 1px solid $color-grey-2
+    padding-top: 6.3rem
+    padding-bottom: 2.9rem
+
+.main-footer
+
+    &__info
+        font-size: 1.4rem
+        line-height: 2.2rem
+        color: $color-font-1
+        margin-bottom: 4rem
+
+    &__logo
+        margin-bottom: 2.4rem
+
+.socials
+    width: 50%
+
+    &__icon
+        font-size: 36px
+
+    &__link
+        display: flex
+        align-items: center
+        justify-content: center
+        width: 36px
+        height: 36px
+        border-radius: 50%
+
+        &_facebook
+            background-color: $color-facebook
+
+        &_twitter
+            background-color: $color-twitter
+
+        &_linkedin
+            background-color: $color-linkedin
+
+.list
+    text-transform: capitalize
+
+    &__what-we-do
+        padding-left: 10.5rem
+
+    &__company,
+        padding-left: 6rem
+
+    &__title
+        text-shadow: -0.4px 0 $color-black, 0 0.4px $color-black, 0.4px 0 $color-black, 0 -0.4px $color-black
+        margin-bottom: 2.4rem
+
+        a
+            font-size: 20px
+            line-height: 25px
+
+    &__link
+        font-size: 1.4rem
+        line-height: 2.8rem
+
 // MEDIA QUERIES
 
 @media (max-width: 1199px)
@@ -694,6 +762,13 @@ ol
 
         &__button
             right: 2px
+
+    .list
+
+        &__what-we-do,
+        &__company,
+        &__support
+            padding-left: unset
 
 @media (max-width: 991px)
 
@@ -803,6 +878,9 @@ ol
 
         &__button
             right: 12px
+
+    .socials
+        width: 100%
 
 @media (max-width: 767px)
 
@@ -1006,6 +1084,15 @@ ol
                 bottom: -176px
                 left: 223px
 
+    .list__what-we-do
+        margin-bottom: 10rem
+
+    .socials
+        position: absolute
+        width: 50%
+        left: 50%
+        transform: translate(-50%, 0)
+
 @media (max-width: 575px)
 
     .container
@@ -1111,3 +1198,15 @@ ol
             right: 0
             transform: translate(-50%, 140%)
             left: 50%
+
+    .main-footer__info
+        text-align: center
+        margin-bottom: 12rem
+
+    .socials
+        transform: translate(-50%, -200%)
+
+    .list__what-we-do
+        margin-bottom: 5rem
+
+    
