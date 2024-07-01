@@ -8,9 +8,9 @@ In this project I learned, how to use [bootstrap](https://getbootstrap.com/) sys
 
 To make slider I used [swiper](https://swiperjs.com/).
 
-**Project** - https://yaroslavasabitova.github.io/digital-agency__bootstrap-example/
+[**Figma**](https://www.figma.com/proto/oBro7fST406W5CZyeAdI7Z/Studio-Design-Landin-Page-(Community)-(Copy)-(Copy)?type=design&node-id=2-3&scaling=min-zoom&page-id=0%3A1)
 
-**Figma** - https://www.figma.com/proto/oBro7fST406W5CZyeAdI7Z/Studio-Design-Landin-Page-(Community)-(Copy)-(Copy)?type=design&node-id=2-3&scaling=min-zoom&page-id=0%3A1
+**Project** - https://yaroslavasabitova.github.io/digital-agency__bootstrap-example/
 
 **Preview**
 
