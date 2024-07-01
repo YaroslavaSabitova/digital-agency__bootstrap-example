@@ -4,7 +4,9 @@
 
 Для создания слайдера использовала [swiper](https://swiperjs.com/).
 
-In this project I learned, how to use [bootstrap](https://getbootstrap.com/) system of classes and columns for adaptive webpage. To make slider I used [swiper](https://swiperjs.com/).
+In this project I learned, how to use [bootstrap](https://getbootstrap.com/) system of classes and columns for adaptive webpage. 
+
+To make slider I used [swiper](https://swiperjs.com/).
 
 **Project** - https://yaroslavasabitova.github.io/digital-agency__bootstrap-example/
 
